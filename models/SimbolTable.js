@@ -2,7 +2,7 @@ const { DataTypes } = require("sequelize");
 const { db } = require("../database/config");
 
 
-const SimbolTable = db.define('tabla_simbolos', {
+const SimbolTable = db.define('TABLA_SIMBOLO', {
     codigo: {
         type: DataTypes.STRING
     },
@@ -16,7 +16,8 @@ const SimbolTable = db.define('tabla_simbolos', {
         type: DataTypes.STRING
     }
 }, {
-    timestamps: false
+    timestamps: false,
+    tableName: 'TABLA_SIMBOLOS'
 })
 
 module.exports = SimbolTable;

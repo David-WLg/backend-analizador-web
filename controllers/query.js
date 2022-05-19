@@ -34,6 +34,7 @@ const showTable = async (req = request, res = response) => {
             msg: 'Error en la consulta'
         })
     } catch (error) {
+        console.log('ERROR SHOW TABLE: ', error);
         res.status(500).json({
             ok: false,
             msg: 'Por favor, comuniquese con el administrador'
@@ -65,6 +66,7 @@ const insertTable = async (req = request, res = response) => {
         })
         
     } catch (error) {
+        console.log('ERROR INSERT TABLE: ', error);
         return res.status(500).json({
             ok: false,
             msg: 'Por favor, comuniquese con el administrador'

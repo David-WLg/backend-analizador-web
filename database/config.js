@@ -6,7 +6,10 @@ const { Sequelize } = require('sequelize');
 //    dialect: 'mysql'
 //})
 
-const db = new Sequelize( process.env.MYSQL_CNN );
+const db = new Sequelize( process.env.MYSQL_CNN , {
+    dialect: 'mysql'
+} );
+
 
 const dbConnection = async() => {
     try{
